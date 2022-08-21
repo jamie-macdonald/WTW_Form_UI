@@ -1,0 +1,52 @@
+
+<div class="container">
+  <h2>Limit and Retention</h2>
+
+  <div class="mainValidations" *ngIf="this.formValidation.validationMessages.length > 0">
+    <p id="validationAdvice">Please sort the following validations!</p>
+    <ol>
+      <li *ngFor="let item of this.formValidation.validationMessages; index as i;">{{item}}</li>
+    </ol>
+  </div>
+  <form name="myform" #formData="ngForm" (ngSubmit)="submit(formData)">
+    <div class="form-group">
+      <div>
+       <input #mainLimitCheck="ngModel" min="0" required name="mainLimit" class="formControl" type="number" step="1000000" placeholder="Main Limit" ngModel/>
+       <span class="mandatory">*</span>
+       <div *ngIf="mainLimitCheck.touched" >
+        <div *ngIf="mainLimitCheck.value <= 0" class="sideValidation">
+          Value must be positive and greater than zero.
+        </div>
+       </div>
+      </div>
+      <div>
+        <input #mainRetentionCheck="ngModel" min="0" required name="mainRetention" class="formControl" type="number" step="1000000" placeholder="Main Retention"  ngModel/>
+        <span class="mandatory">*</span>
+        <div *ngIf="mainRetentionCheck.touched" >
+          <div *ngIf="mainRetentionCheck.value <= 0" class="sideValidation">
+            Value must be positive and greater than zero.
+          </div>
+        </div>
+      </div>
+      <div>
+        <select #typeOfExecutionCheck="ngModel" required name="typeOfExecution" class="formControl" ngModel>
+          <option value="">Type of execution...</option>
+          <option value="Simple">Simple</option>
+          <option value="Complex">Complex</option>
+        </select>
+        <span class="mandatory">*</span>
+        <div *ngIf="typeOfExecutionCheck.touched" >
+          <div *ngIf="typeOfExecutionCheck.value == ''"  class="sideValidation">
+            Please select a Type of Excetution.
+          </div>
+        </div>
+      </div>
+      <div>
+        <button [disabled]="inSaveMode" class="btn btn-primary" type="submit">Calculate</button>
+        <span class="mandatory">*</span> mandatory
+      </div>
+    </div>
+  </form>
+</div>
+<hr />
+
