@@ -1,28 +1,64 @@
-.mainValidations{color:red}
-.sideValidation{color: red;}
-.mandatory{color: red;}
+.mainValidations{
+  color:red
+}
+
+.sideValidation{
+  color: red;
+}
+
+.mandatory{
+  color: red;
+}
+
 .container{
-  width:20%;
+  width:445px;
   margin:0 auto;
   padding:0 2em 2em 2em;
 }
+
 .formControl{
   min-height: 2em;
   margin:1em 0;
   width: 220px;
 }
+
 .btn-primary{
   color:white;
   background-color: lightslategray;
   cursor: pointer;
   margin:0 1em 0 0;
 }
-.btn-primary:hover {background-color: lightblue;}
+
+.btn-primary:hover {
+  background-color: lightblue;
+}
 
 .mainValidations{
   background-color: #ffe6e6;
   border:thin red solid;
 }
+
 #validationAdvice{
   padding:0 1em;
+}
+
+#loading {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;position:
+  fixed;display:
+  block; z-index: 99
+}
+
+#loading-image {
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  z-index: 100;
+  opacity: 0.2;
+}
+
+.doNotShow {
+  display:none;
 }

@@ -37,8 +37,8 @@ export class ExecutionInputFormComponent implements OnInit {
         await new Promise(f => setTimeout(f, 3000));
         this.calculateRetentionLimit(mainLimit, mainRetention, typeOfExecution)
         formData.resetForm({typeOfExecution:''});
-        this.inSaveMode = false;
     }
+    this.inSaveMode = false;
   }
 
   private calculateRetentionLimit(mainLimit: string, mainRetention: string, typeOfExecution: string){

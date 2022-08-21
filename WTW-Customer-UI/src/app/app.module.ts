@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ExecutionInputFormComponent } from './execution-input-form/execution-input-form.component';
 import { ExecutionOutputTableComponent } from './execution-output-table/execution-output-table.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +16,8 @@ import { ExecutionOutputTableComponent } from './execution-output-table/executio
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

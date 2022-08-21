@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ILimitRetentionCalculations } from '../Interfaces/ILimitRetentionCalculations';
 
 @Component({
   selector: 'app-execution-output-table',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExecutionOutputTableComponent implements OnInit {
 
-  constructor() { }
+  @Input() tableData: ILimitRetentionCalculations[] = [];
+  public showOfRecords = 0;
+
+  submit(formData: any){
+    this.showOfRecords = formData.value
+  }
 
   ngOnInit(): void {
   }

@@ -11,7 +11,8 @@
 
 <div class="content" role="main">
   <app-execution-input-form (collectedResults)=onBookAdded($event)></app-execution-input-form>
-  <app-execution-output-table></app-execution-output-table>
+  <hr />
+  <app-execution-output-table [tableData]="results"></app-execution-output-table>
 </div>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
