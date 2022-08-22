@@ -8,7 +8,7 @@ import { ILimitRetentionCalculations } from './Interfaces/ILimitRetentionCalcula
 })
 export class AppComponent {
 
-  title = 'WTW-Customer-UI';
+  title = 'WTW: Perspective that moves you | Risk, Broking, HR, Benefits - WTW';
   results: ILimitRetentionCalculations[] = [];
 
   // add to results to pass to output table component

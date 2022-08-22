@@ -15,16 +15,15 @@
         </tr>
       </ng-template>
     </table>
-    <form name="myform">
+    <form name="indexForm" name="indexForm">
       <span>
         Total Records: {{tableData.length}}
       </span>
       <span class="showRecords">
         Show
-        <select name="numberOfRecordsPerPage" (change)="submit($event.target)" ngModel>
-          <option value="0" selected>all</option>
-          <option  *ngFor="let index of [5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]" value="{{ index }}">
-            {{ index }}
+        <select name="numberOfRecordsPerPage" id="numberOfRecordsPerPage" (change)="submit($event.target)" >
+          <option  *ngFor="let arryValue of dropDownRecords" value="{{ arryValue }}" [attr.selected]="arryValue==5 ? true : null">
+            {{ arryValue }}
           </option>
         </select>
         records

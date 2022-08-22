@@ -16,8 +16,7 @@ import { ExecutionOutputTableComponent } from './execution-output-table/executio
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

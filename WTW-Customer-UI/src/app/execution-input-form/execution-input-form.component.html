@@ -9,7 +9,7 @@
       <li *ngFor="let item of this.formValidation.validationMessages; index as i;">{{item}}</li>
     </ol>
   </div>
-  <form name="myform" #formData="ngForm" (ngSubmit)="submit(formData)">
+  <form name="fromdata" id="formdata" #formData="ngForm" (ngSubmit)="submit(formData)">
     <div class="form-group">
       <div>
        <input #mainLimitCheck="ngModel" min="0" required name="mainLimit" class="formControl" type="number" step="1000000" placeholder="Main Limit" ngModel/>
