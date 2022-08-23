@@ -1,0 +1,33 @@
+<div class="container" *ngIf="tableData.length>0">
+  <h2>Limit and Retention Results</h2>
+  <div>
+    <table>
+      <tr>
+        <th>Reference Date</th>
+        <th>Benchmark One</th>
+        <th>Benchmark Two</th>
+      </tr>
+      <ng-template ngFor let-results [ngForOf]="tableData" let-i="index">
+        <tr *ngIf="i<=this.showOfRecords-1 || this.showOfRecords ==0">
+          <td>{{results.referenceDate}}</td>
+          <td>{{results.benchMarkOne}}%</td>
+          <td>{{results.benchMarkTwo}}%</td>
+        </tr>
+      </ng-template>
+    </table>
+    <form name="indexForm" name="indexForm">
+      <span>
+        Total Records: {{tableData.length}}
+      </span>
+      <span class="showRecords">
+        Show
+        <select name="numberOfRecordsPerPage" id="numberOfRecordsPerPage" (change)="submit($event.target)" >
+          <option  *ngFor="let arryValue of dropDownRecords" value="{{ arryValue }}" [attr.selected]="arryValue==5 ? true : null">
+            {{ arryValue }}
+          </option>
+        </select>
+        records
+      </span>
+    </form>
+  </div>
+</div>
